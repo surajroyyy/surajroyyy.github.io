@@ -1,0 +1,360 @@
+/* Your SCSS here. */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@mixin circle {
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #13294B;
+}
+
+header {
+  overflow: hidden;
+  background-color: #13294B;
+  transition: 0.4s;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+header ul li:hover a {
+  background-color: #E84A27;
+  transition: 0.5s ease background-color;
+}
+
+header ul li.active {
+  background-color: #E84A27;
+  transition: 0.5s ease background-color;
+}
+
+header ul li.active a {
+  color: white;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  //font-size: 25px;
+  text-decoration: none;
+  font-family: Futura;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  //background-color: gray;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#home {
+  font-size: 60px;
+  z-index: 5;
+  opacity: 1;
+}
+
+#home img {
+  @include circle;
+  animation: fadeIn 5s;
+}
+
+#home .column {
+  float: left;
+  justify-content: space-between;
+  padding: 5vh;
+}
+
+.about-text {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  z-index: 10;
+  animation: fadeIn 5s;
+}
+
+.about-text h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.about-text h3 {
+  z-index: 10;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.about-text p {
+  font-weight: 100;
+  font-size: 0.6em;
+  //color: #13294B;
+}
+
+#suraj {
+  color: #E84A27;
+}
+
+#experience {
+  font-size: 35px;
+}
+
+#experience .column img {
+  @include circle;
+  cursor: pointer;
+  opacity: 0.95;
+  z-index: 5;
+}
+
+#experience .column {
+  padding: 10vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#experience .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#experience #ye-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+#projects {
+  font-size: 35px;
+}
+
+#projects img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: -100;
+}
+
+#contact {
+  background-color: #13294B;
+  font-size: 35px;
+  height: 20vh;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: -10;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: black;
+  z-index: -5;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.8s;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal li {
+  margin: 10px 0;
+}
+
+.modal-header {
+  padding: 10px 16px;
+  background-color: #13294B;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  padding: 1vw 5vh;
+  color: black;
+  font-weight: 200;
+  font-size: 0.5em;
+}
+
+.modal-body ul li {
+  padding: 0px 10px;
+}
+
+.modal-footer {
+  padding: 10px 16px;
+  background-color: #13294B;
+  color: white;
+  font-weight: 600;
+  font-size: 0.7em;
+}
+
+.modal-content {
+  margin: 15% auto;
+  padding: 0px;
+  border: 1px solid black;
+  width: 50%;
+  background-color: white;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #E84A27;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.carousel {
+  width: 70vh;
+  height: 70vh;
+  position: relative;
+  margin: 0 auto;
+  z-score: 100;
+}
+
+.slides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carousel .text a {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.carousel .text a:hover {
+  color: #E84A27;
+}
+
+.number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+footer {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  height: 4vh;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+.fa{
+  padding: 20px;
+  font-size: 7vh;
+  width: 25vh;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.fa:hover {
+  color: #E84A27;
+}
+
+
+

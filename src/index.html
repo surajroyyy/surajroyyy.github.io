@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Suraj Roy</title>
+    </head>
+    <header id="navbar">
+        <ul>
+            <li class="home"><a href="#home">HOME</a></li>
+            <li class="experience"><a href="#experience">EXPERIENCE</a></li>
+            <li class="projects"><a href="#projects">PROJECTS</a></li>
+            <li class="contact"><a href="#contact">CONTACT</a></li>
+        </ul>
+    </header>
+    <body>
+        <div class="video">
+            <video src="assets/uiucdrone.mp4" muted loop autoplay></video>
+        </div>
+        <div class="overlay"></div>
+        <section id="home">
+            <div class="row">
+                <div class="column">
+                    <div class="about-text">
+                        <h2>Hey,</h2>
+                        <h3>my name's <span id="suraj">Suraj.</span></h3>
+                        <p>I love to create.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <img src="assets/headshot.JPG">
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <img id="ye-overlay" src="assets/ye.png">
+            <div class="overlay"></div>
+<!--            <h1>Experience</h1>-->
+            <div class="row">
+                <div class="column">
+                    <img id="epic" src="assets/epicor.jpg">
+                    <div id="epicModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times</span>
+                                <p>Epicor</p>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>Worked on the Propello product working alongside 4 senior developers and the director of product development</li>
+                                    <li>Implemented full-stack solutions with HTML and Javascript for the UI and Python and Django for the backend</li>
+                                    <li>Designed replacement tracking feature in which customers and businesses can interact with a streamlined view of all past replacements of a product increasing the reducing number of clicks by 15%</li>
+                                    <li>Developed fixed order quantity fields in which users can schedule automatic orders for inventory that drops below a given threshold optimizing just-in-time inventory management and increasing customer revenue by 20%</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <p>June 2022 - August 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <img id="hang" src="assets/hang.jpg">
+                    <div id="hangModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times</span>
+                                <p>Hang</p>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>Worked on mobile application startup aimed at connecting people through spontaneous social activities</li>
+                                    <li>Built event details page using DART and Flutter framework to allow users to engage with and find social events resulting in over 5000+ users creating Hangs and interacting with each other</li>
+                                    <li>Developed user and event reporting feature to ensure user safety and enable them to flag suspicious activities</li>
+                                    <li>Designed TypeScript server endpoints for MongoDB database to ensure the report feature functionality</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <p>October 2020 - January 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <img id="moback" src="assets/blackmoback.png">
+                    <div id="moModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times</span>
+                                <p>Moback, Inc.</p>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>Worked as an engineer on the mobile development team for getArra, an augmented reality video conferencing app</li>
+                                    <li>Implemented a searchable library of 3D objects using Google Poly for the iPhone app using Swift and Xcode 12</li>
+                                    <li>Collaborated on a team of 8 engineers that reported up to company executives to facilitate development processes</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <p>June 2017 - August 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <img src="assets/florence.png">
+            <div class="overlay"></div>
+<!--            <h1>Projects</h1>-->
+            <div class="carousel">
+                <div class="slides">
+                    <div class="number-text">1 / 3</div>
+                    <img src="assets/mountain-project.png">
+                    <div class="text"><a href="https://github.com/surajroyyy/mountain-paths" target="_blank">Mountain Paths</a></div>
+                </div>
+
+                <div class="slides">
+                    <div class="number-text">2 / 3</div>
+                    <img src="assets/mosaic-project.png">
+                    <div class="text"><a href="https://github.com/surajroyyy" target="_blank">Mosaics</a></div>
+                </div>
+
+                <div class="slides">
+                    <div class="number-text">3 / 3</div>
+                    <img src="assets/sf-project.png">
+                    <div class="text"><a href="https://github.com/surajroyyy/sf-road-networks" target="_blank">San Francsico Road Networks</a></div>
+                </div>
+
+                <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlides(1)">&#10095;</a>
+            </div>
+        </section>
+        <section id="contact">
+            <ul class="socials">
+                <a href="mailto:suraj.roy605@gmail.com" target="_blank" class="fa fa-envelope"></a>
+                <a href="https://www.linkedin.com/in/surajroy605/" target="_blank" class="fa fa-linkedin-square"></a>
+                <a href="https://github.com/surajroyyy" target="_blank" class="fa fa-github"></a>
+                <a href="https://www.youtube.com/channel/UCErm4_tFJawFyeRQNfNHKyQ" target="_blank" class="fa fa-youtube"></a>
+            </ul>
+        </section>
+    </body>
+    <footer>
+        <p>All photos and videos taken by Suraj Roy.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</html>
+
