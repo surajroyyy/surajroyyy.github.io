@@ -1,9 +1,3 @@
-/* Your JS here. */
-console.log('Hello World!')
-
-// const sections = document.querySelectorAll('section');
-// const navOptions = document.querySelectorAll();
-
 const sections = document.querySelectorAll('section');
 const navList = document.querySelectorAll("header ul li");
 
